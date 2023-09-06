@@ -12,6 +12,7 @@
   --header-text-color: white;
   --product-brand-name-color: rgb(99, 99, 99);
   --price-color: rgb(255, 45, 45);
+  --footer-bg-color: #1a1a1a;
 }
 
 body {
@@ -36,7 +37,7 @@ img {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   width: 100%;
 }
@@ -66,6 +67,10 @@ img {
 
 .relative {
   position: relative;
+}
+
+.flex {
+  display: flex;
 }
 
 /* HEADER */
@@ -185,4 +190,40 @@ main img {
 
 .add-favorite:hover {
   color: red;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--footer-bg-color);
+  padding: 25px;
+  color: white;
+}
+
+.footer-container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-section strong {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.footer-section {
+  gap: 10px;
+  justify-content: center;
+}
+
+.footer-section ul {
+  gap: 20px;
+}
+
+.socials-container span {
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+.socials {
+  gap: 12px;
 }
