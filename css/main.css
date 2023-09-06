@@ -33,7 +33,7 @@ img {
 }
 
 .col-4 {
-  width: calc((100% / 12) * 4);
+  width: calc(((100% / 12) * 4) - 30px);
 }
 
 .container {
@@ -45,9 +45,11 @@ img {
 .row {
   display: flex;
   margin-top: 100px;
-  gap: 40px;
   line-height: 1.2;
-  padding: 20px;
+  padding: 30px;
+  flex-wrap: wrap;
+  row-gap: 50px;
+  justify-content: space-between;
 }
 
 .row-scroll {
