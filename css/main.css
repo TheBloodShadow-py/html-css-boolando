@@ -1,6 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Dhurjati&display=swap");
+
 /* GENERAL SETTINGS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --header-color: #ff6900;
+  --header-text-color: white;
+}
+
+body {
+  font-family: "Dhurjati", sans-serif;
+  line-height: 1;
+  font-size: 22px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.col-4 {
+  width: calc((100% / 12) * 4);
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* HEADER */
+
+header {
+  background-color: var(--header-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 18px;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  top: 0;
+  color: var(--header-text-color);
+  box-shadow: 0px 5px 5px rgba(17, 17, 17, 0.315);
+}
+
+.logo {
+  width: 120px;
+}
+
+header ul {
+  display: flex;
+  gap: 15px;
+}
+
+header ul li:hover {
+  cursor: pointer;
+}
+
+/* MAIN CONTENT */
