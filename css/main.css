@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dhurjati&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dhurjati&family=Roboto:wght@300&display=swap");
 
 /* GENERAL SETTINGS */
 * {
@@ -10,12 +10,12 @@
 :root {
   --header-color: #ff6900;
   --header-text-color: white;
+  --product-brand-name-color: rgb(99, 99, 99);
+  --price-color: rgb(255, 45, 45);
 }
 
 body {
-  font-family: "Dhurjati", sans-serif;
-  line-height: 1;
-  font-size: 22px;
+  font-family: "Roboto", sans-serif;
 }
 
 ul,
@@ -36,9 +36,36 @@ img {
 }
 
 .container {
-  max-width: 500px;
+  max-width: 1100px;
   margin: 0 auto;
   width: 100%;
+}
+
+.row {
+  display: flex;
+  margin-top: 100px;
+  gap: 40px;
+  line-height: 1.2;
+  padding: 20px;
+}
+
+.row-scroll {
+  margin: 60px 0px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  align-items: flex-start;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.relative {
+  position: relative;
 }
 
 /* HEADER */
@@ -55,6 +82,10 @@ header {
   top: 0;
   color: var(--header-text-color);
   box-shadow: 0px 5px 5px rgba(17, 17, 17, 0.315);
+  font-family: "Dhurjati", sans-serif;
+  line-height: 1;
+  font-size: 22px;
+  z-index: 5;
 }
 
 .logo {
@@ -71,3 +102,87 @@ header ul li:hover {
 }
 
 /* MAIN CONTENT */
+
+.product-brand-name {
+  font-size: 14px;
+  color: var(--product-brand-name-color);
+}
+
+.product-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.original-price {
+  text-decoration: line-through rgb(94, 94, 94) 2px;
+  font-size: 16px;
+}
+
+.disconted-price {
+  color: var(--price-color);
+  font-size: 15px;
+}
+
+main img {
+  border-radius: 15px;
+}
+
+.hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+}
+
+.primary-img {
+  z-index: 1;
+}
+
+.col-4:hover .hover-img {
+  z-index: 2;
+  opacity: 1;
+  transition: 500ms all;
+}
+
+.discont-amount {
+  background-color: red;
+  color: white;
+  padding: 4px 10px;
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  font-weight: bold;
+  font-size: 13px;
+  z-index: 3;
+  line-height: 1;
+}
+
+.eco-friendly {
+  background-color: green;
+  color: white;
+  padding: 4px 10px;
+  position: absolute;
+  left: 55px;
+  bottom: 40px;
+  font-weight: bold;
+  font-size: 13px;
+  z-index: 3;
+  line-height: 1;
+}
+
+.add-favorite {
+  background-color: white;
+  padding: 4px 5px;
+  border-radius: 3-px;
+  position: absolute;
+  right: 0px;
+  top: 15px;
+  font-size: 25px;
+  z-index: 3;
+  line-height: 1;
+}
+
+.add-favorite:hover {
+  color: red;
+}
