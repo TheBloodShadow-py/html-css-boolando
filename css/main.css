@@ -284,4 +284,8 @@ footer {
   .socials-container {
     display: none;
   }
+
+  .row {
+    justify-content: center;
+  }
 }
