@@ -19,6 +19,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  position: relative;
+  min-height: 100vh;
+}
+
 ul,
 ol {
   list-style: none;
@@ -34,6 +39,10 @@ img {
 
 .col-4 {
   width: calc(((100% / 12) * 4) - 30px);
+}
+
+.col-4:nth-last-child(-n + 3) {
+  margin-bottom: 150px;
 }
 
 .container {
@@ -200,6 +209,11 @@ footer {
   background-color: var(--footer-bg-color);
   padding: 25px;
   color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 5;
 }
 
 .footer-container {
